@@ -1,0 +1,27 @@
+{
+    "name": "chrsitianfutterlieb/glibi",
+    "type": "typo3-cms-extension",
+    "description": "Glibi",
+    "homepage": "https://github.com/christianfutterlieb/glibi",
+    "version": "0.1.0-dev",
+    "authors": [
+        {
+            "name": "Corinne Futterlieb",
+            "homepage": "https://www.corinne-futterlieb.com/",
+            "role": "Idea"
+        },
+        {
+            "name": "Christian Futterlieb",
+            "homepage": "https://github.com/christianfutterlieb/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "7.6|^8.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Christianfutterlieb\\Glibi\\": "Classes"
+        }
+    }
+}

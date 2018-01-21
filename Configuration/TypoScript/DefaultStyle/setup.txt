@@ -1,0 +1,8 @@
+/**
+ * Default style
+ */
+plugin.tx_glibi {
+    _CSS_DEFAULT_STYLE = 1
+    _CSS_DEFAULT_STYLE.cObject = FILE
+    _CSS_DEFAULT_STYLE.cObject.file = EXT:glibi/Resources/Public/Css/DefaultStyle.css
+}

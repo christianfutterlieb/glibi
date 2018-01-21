@@ -1,0 +1,15 @@
+/**
+ * Default configuration
+ */
+plugin.tx_glibi {
+    settings {
+    }
+    view{
+        templateRootPaths.0 = EXT:glibi/Resources/Private/Templates/
+        partialRootPaths.0 = EXT:glibi/Resources/Private/Partials/
+        layoutRootPaths.0 = EXT:glibi/Resources/Private/Layouts/
+    }
+    persistence {
+        storagePid =
+    }
+}

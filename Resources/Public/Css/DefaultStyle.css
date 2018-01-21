@@ -1,0 +1,81 @@
+/**
+ * Default style
+ */
+.tx_glibi .searchForm {
+    background: #b3d0e8;
+    padding: 10px;
+}
+.tx_glibi .categoriesContainer {
+    width: 100%;
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+}
+.tx_glibi .categoriesContainer .parentCategory {
+    padding: 5px;
+}
+.tx_glibi a.button {
+    border:0.08rem solid #bbb;
+    border-radius: 0.1rem;
+    background:#eee;
+    padding:.5rem 1rem;
+    line-height:2.16rem;
+    text-decoration:none;
+    transition:border-color 0.2s, background-color 0.2s;
+}
+.tx_glibi a.button:hover {
+    border-color:#bbb;
+    background-color:#dedede;
+}
+
+/**
+ * Flashmessage styles. Colors taken from: EXT:install/Resources/Public/Css/install.css
+ */
+.tx_glibi ul.typo3-messages {
+    list-style-type:none;
+    display:block;
+    margin:0;
+    padding:0;
+}
+.tx_glibi ul.typo3-messages li.alert {
+    display:block;
+    border:0.08rem solid transparent;
+    border-radius: 0.1rem;
+    padding:1rem;
+    margin:0;
+    margin-bottom:1rem;
+    color: #fff;
+}
+.tx_glibi ul.typo3-messages li.alert h4.alert-title {
+    font-size:1.2rem;
+    margin:0;
+    margin-bottom:0.5rem;
+}
+.tx_glibi ul.typo3-messages li.alert p.alert-message {
+    font-size:1rem;
+    margin:0;
+    padding:0;
+}
+.tx_glibi ul.typo3-messages li.alert.alert-notice {
+    background-color: #eee;
+    border-color: #bbb;
+    color: #333;
+}
+.tx_glibi ul.typo3-messages li.alert.alert-info {
+    background-color: #6daae0;
+}
+.tx_glibi ul.typo3-messages li.alert.alert-success {
+    background-color: #79a548;
+}
+.tx_glibi ul.typo3-messages li.alert.alert-warning {
+    background-color: #e8a33d;
+}
+.tx_glibi ul.typo3-messages li.alert.alert-danger {
+    background-color: #c83c3c;
+}

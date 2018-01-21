@@ -1,0 +1,36 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:g="http://typo3.org/ns/Christianfutterlieb/Glibi/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<div class="searchForm">
+    <h2>Search-Form</h2>
+    <f:form action="search" method="POST" object="{searchForm}" objectName="searchForm">
+        <div class="identifier">
+            <label for="searchForm-bookIdentifier">Book-Identifier Code</label>
+            <f:form.textfield property="bookIdentifier" id="searchForm-bookIdentifier" value="" />
+        </div>
+
+        <div class="categoriesContainer">
+            <f:for each="{categories}" as="parentCategory">
+                <div class="parentCategory">
+                    <h3>{parentCategory.title}</h3>
+                    <f:for each="{g:ChildCategories(category:parentCategory)}" as="category">
+                        <div class="category">
+                            <f:form.checkbox multiple="1" property="categories" value="{category.uid}" id="category-{category.uid}" />
+                            <label for="category-{category.uid}">{category.title}</label>
+                        </div>
+                    </f:for>
+                </div>
+            </f:for>
+        </div>
+    
+        <div>
+            <label for="searchForm-conjunction">Conjunction selection</label>
+            <f:form.select id="searchForm-conjunction" property="conjunction" options="{g:form.conjunctionOptions()}" />
+        </div>
+
+        <f:form.submit value="SEARCH" />
+    </f:form>
+</div>
+
+</html>

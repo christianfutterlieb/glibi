@@ -1,0 +1,15 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:g="http://typo3.org/ns/Christianfutterlieb/Glibi/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:if condition="{book.identifier}!=''">
+    <p>
+        Identifier: <code>{book.identifier}</code>
+    </p>
+    <p>
+        Permalink:
+        <f:link.action action="showBook" arguments="{book:book}" absolute="1">Click here!</f:link.action>
+    </p>
+</f:if>
+
+</html>
