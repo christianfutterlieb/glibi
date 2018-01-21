@@ -17,7 +17,7 @@
 defined ('TYPO3_MODE') or die ('Access denied.');
 
 call_user_func(function($extKey){
-    // DEV: add test plugin
+    // Add plugin
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin('Christianfutterlieb.Glibi', 'Thing', [
         'Thing' => 'search,showBook'
     ], [
