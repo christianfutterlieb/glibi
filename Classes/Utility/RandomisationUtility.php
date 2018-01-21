@@ -28,7 +28,7 @@ class RandomisationUtility
      *
      * @param array $array
      */
-    public static function randomizeArray(&$array)
+    public static function randomizeArray(array &$array)
     {
         usort($array, function($a, $b) {
             return random_int(-1, 1);
