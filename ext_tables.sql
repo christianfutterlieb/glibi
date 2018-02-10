@@ -15,6 +15,7 @@ CREATE TABLE tx_glibi_domain_model_thing (
     title varchar(255) NOT NULL DEFAULT '',
     bodytext mediumtext,
     categories int(11) unsigned DEFAULT '0' NOT NULL,
+    books int(11) unsigned DEFAULT '0' NOT NULL,
 
     PRIMARY KEY (uid),
     INDEX parent (pid),
