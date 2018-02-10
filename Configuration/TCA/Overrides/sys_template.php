@@ -15,4 +15,4 @@
  */
 
 // Add static template
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('glibi', 'Configuration/Typoscript/DefaultStyle', 'Glibi (default style)');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('glibi', 'Configuration/TypoScript/DefaultStyle', 'Glibi (default style)');
