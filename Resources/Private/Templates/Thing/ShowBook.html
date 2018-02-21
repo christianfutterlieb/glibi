@@ -17,14 +17,16 @@
             <f:then>
                 <f:widget.paginate objects="{book.things}" as="paginatedThings" configuration="{itemsPerPage: 1, insertAbove: 0, insertBelow: 1, maximumNumberOfLinks: 10}" >
                     <f:for each="{paginatedThings}" as="thing">
-                        <div>
+                        <div class="thing">
                             <h3>{thing.title}</h3>
-                            <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{thing.bodytext}</f:format.html>
-                            <p>Kategorien:
+                                <div class="bodytext">
+                                    <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{thing.bodytext}</f:format.html>
+                                </div>
+                            <div class="categories">Kategorien:
                                 <f:for each="{thing.categories}" as="tc" iteration="iterator">
                                     {tc.title}<f:if condition="{iterator.isLast} == 0">,</f:if>
                                 </f:for>
-                            </p>
+                            </div>
                         </div>
                     </f:for>
                 </f:widget.paginate>
