@@ -3,13 +3,15 @@
       data-namespace-typo3-fluid="true">
 
 <f:if condition="{book.identifier}!=''">
-    <p>
-        Identifier: <code>{book.identifier}</code>
-    </p>
-    <p>
-        Permalink:
-        <f:link.action action="showBook" arguments="{book:book}" absolute="1">Click here!</f:link.action>
-    </p>
+    <div class="bookIdentifier">
+        <p>
+            Identifier: <code>{book.identifier}</code>
+        </p>
+        <p>
+            Permalink:
+            <f:link.action action="showBook" arguments="{book:book}" absolute="1">Click here!</f:link.action>
+        </p>
+    </div>
 </f:if>
 
 </html>

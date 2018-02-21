@@ -3,35 +3,37 @@
 <f:layout name="Default" />
 
 <f:section name="content">
-    <h1>ShowBook Action</h1>
-    <p>
-        <f:link.action action="search">Back to overview</f:link.action>
-    </p>
+    <div class="tx_glibi_showbook">
+        <h1>ShowBook Action</h1>
+        <p>
+            <f:link.action action="search">Back to overview</f:link.action>
+        </p>
 
-    <h2>Result list (Book)</h2>
+        <h2>Result list (Book)</h2>
 
-    <f:render partial="Book/Info" arguments="{book:book}" />
+        <f:render partial="Book/Info" arguments="{book:book}" />
 
-    <f:if condition="{book.things}">
-        <f:then>
-            <f:widget.paginate objects="{book.things}" as="paginatedThings" configuration="{itemsPerPage: 1, insertAbove: 0, insertBelow: 1, maximumNumberOfLinks: 10}" >
-                <f:for each="{paginatedThings}" as="thing">
-                    <div>
-                        <h3>{thing.title}</h3>
-                        <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{thing.bodytext}</f:format.html>
-                        <p>Kategorien:
-                            <f:for each="{thing.categories}" as="tc" iteration="iterator">
-                                {tc.title}<f:if condition="{iterator.isLast} == 0">,</f:if>
-                            </f:for>
-                        </p>
-                    </div>
-                </f:for>
-            </f:widget.paginate>
-        </f:then>
-        <f:else>
-            <p class="error">No results matching your search (LLL)</p>
-        </f:else>
-    </f:if>
+        <f:if condition="{book.things}">
+            <f:then>
+                <f:widget.paginate objects="{book.things}" as="paginatedThings" configuration="{itemsPerPage: 1, insertAbove: 0, insertBelow: 1, maximumNumberOfLinks: 10}" >
+                    <f:for each="{paginatedThings}" as="thing">
+                        <div>
+                            <h3>{thing.title}</h3>
+                            <f:format.html parseFuncTSPath="lib.parseFunc_RTE">{thing.bodytext}</f:format.html>
+                            <p>Kategorien:
+                                <f:for each="{thing.categories}" as="tc" iteration="iterator">
+                                    {tc.title}<f:if condition="{iterator.isLast} == 0">,</f:if>
+                                </f:for>
+                            </p>
+                        </div>
+                    </f:for>
+                </f:widget.paginate>
+            </f:then>
+            <f:else>
+                <p class="error">No results matching your search (LLL)</p>
+            </f:else>
+        </f:if>
+    </div>
 </f:section>
 
 </html>
