@@ -23,11 +23,14 @@
                 </div>
             </f:for>
         </div>
-    
+
+        <f:form.hidden id="searchForm-conjunction" property="conjunction" value="0" />
+        <f:comment>
         <div>
             <label for="searchForm-conjunction">Conjunction selection</label>
             <f:form.select id="searchForm-conjunction" property="conjunction" options="{g:form.conjunctionOptions()}" />
         </div>
+        </f:comment>
 
         <f:form.submit value="SEARCH" />
     </f:form>
